@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => (
   <header>
     <div>
-      <nav className="navbar bg-dark fixed-top">
+      <nav className="navbar bg-ds-blue fixed-top">
         {/* add router to the anchor tag */}
         <a className="navbar-brand">
           <span className="devstart-brand">DevStart</span>
