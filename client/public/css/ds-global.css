@@ -30,3 +30,9 @@
   background-color: var(--ds-blue);
   border-color: var(--ds-blue);
 }
+
+.btn-ds-outline-primary {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
