@@ -1,6 +1,15 @@
 import React from "react";
 import "./Dashboard.css";
+import ColumnOne from "./ColumnOne/ColumnOne";
 
-const Row = () => <div className="row" />;
+const Dashboard = () => {
+  return (
+    <div className="wrapper">
+    
+    <ColumnOne />
+   
+    </div>
+  )
+}
 
-export default Row;
+export default Dashboard;

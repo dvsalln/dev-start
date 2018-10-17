@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
 //uncomment this below and the route when signup form is ready
 // import SignUpForm from "./components/SignUp/Form";
-import DeveloperDashboard from "./components/Developer/Dashboard";
+import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
+import "./App.css";
 
 class App extends Component {
   render() {
