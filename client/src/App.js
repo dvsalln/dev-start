@@ -1,12 +1,24 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
-
-import Dashboard from "./components/Developer/Dashboard/Dashboard"
+//uncomment this below and the route when signup form is ready
+// import SignUpForm from "./components/SignUp/Form";
+import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
+import SponsorDashboard from "./components/Sponsor/Dashboard";
 import "./App.css";
 
 class App extends Component {
   render() {
-    return <Dashboard />;
+    return (
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/signup" component={SignUpForm} /> */}
+          <Route path="/developer-dashboard" component={DeveloperDashboard} />
+          <Route path="/sponsor-dashboard" component={SponsorDashboard} />
+        </div>
+      </Router>
+    );
   }
 }
 
