@@ -4,8 +4,10 @@ import Home from "./components/Home";
 //uncomment this below and the route when signup form is ready
 // import SignUpForm from "./components/SignUp/Form";
 import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
+import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
-import "./App.css";
+//Global CSS Style
+import "./css/ds-global.css";
 
 class App extends Component {
   render() {
@@ -14,8 +16,9 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           {/* <Route exact path="/signup" component={SignUpForm} /> */}
-          <Route path="/developer-dashboard" component={DeveloperDashboard} />
-          <Route path="/sponsor-dashboard" component={SponsorDashboard} />
+          <Route path="/developer/dashboard" component={DeveloperDashboard} />
+          <Route path="/developer/profile" component={DeveloperProfile} />
+          <Route path="/sponsor/dashboard" component={SponsorDashboard} />
         </div>
       </Router>
     );
