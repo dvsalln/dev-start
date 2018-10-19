@@ -13,12 +13,11 @@ class Teams extends Component {
 
   render() {
     return (
-      <div className="col-lg-12">
       <div className="card">
         <div className="card-body">
         <div class="row">
           <h2 className="card-title">Teams</h2>
-          <button className="add-team btn btn-primary"><strong>+</strong></button>
+          <button className="add-team btn btn-success"><strong>+</strong></button>
         </div>
           {this.state.teams.map(teams => (
             <TeamsList
@@ -30,7 +29,7 @@ class Teams extends Component {
           ))}
         </div>
       </div>
-    </div>
+    
     );
   }
 }

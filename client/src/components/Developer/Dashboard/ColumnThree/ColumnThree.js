@@ -4,14 +4,10 @@ import Teams from "./Teams";
 import "./ColumnThree.css";
 
 const ColumnThree = () => (
-  <div className="col-sm-4">
-    <div className="column-three">
-      
+  <div className="col-2">
       <Teams />
       <Friends />
-    
     </div>
-  </div>
 );
 
 export default ColumnThree;

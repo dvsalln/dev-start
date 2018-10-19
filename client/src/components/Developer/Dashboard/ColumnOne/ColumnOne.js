@@ -5,13 +5,9 @@ import "./ColumnOne.css";
 
 
 const ColumnOne = () => (
-    <div class="col-sm-12">
-      <div className="column-one">
-        <div className="col-sm-6">
+    <div class="col-4">
         <ProfileHeader />
         <Nav />
-        </div>
-      </div>
     </div>
   );
 
