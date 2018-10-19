@@ -10,8 +10,8 @@ const Dashboard = () => {
   return (
 
     <div className="container">
+    <Header />
       <div className="row">
-      <Header />
       <ColumnOne />
       <ColumnTwo />
       <ColumnThree />
