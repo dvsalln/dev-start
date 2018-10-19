@@ -25,6 +25,7 @@ class Proposals extends Component {
           ref={input => this.search = input}
           onChange={this.handleInputChange}
         />
+        <button className="search btn btn-success">Search</button>
         <p>{this.state.query}</p>
       </form>
       <hr></hr>
