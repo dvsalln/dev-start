@@ -13,6 +13,7 @@ class Teams extends Component {
 
   render() {
     return (
+      <div className="col-lg-12">
       <div className="card">
         <div className="card-body">
         <div class="row">
@@ -29,6 +30,7 @@ class Teams extends Component {
           ))}
         </div>
       </div>
+    </div>
     );
   }
 }

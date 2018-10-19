@@ -2,8 +2,8 @@ import React from "react";
 import "./FriendList.css";
 
 const FriendList = props => (
-  <div className="row">
-    <div className="col-4">
+  <div className="col-sm-12">
+    <div className="col-sm-4">
       <img
         className="rounded-circle"
         alt={props.name}
