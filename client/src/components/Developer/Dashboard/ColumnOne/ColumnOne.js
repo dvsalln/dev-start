@@ -5,7 +5,7 @@ import "./ColumnOne.css";
 
 
 const ColumnOne = () => (
-    <div class="col-4">
+    <div class="col-3">
         <ProfileHeader />
         <Nav />
     </div>

@@ -29,12 +29,7 @@ class Proposals extends Component {
       </form>
       <hr></hr>
       <table>
-          <ul><th>Job Title</th>
-          <tr>
-            <td>Software Engineer</td>
-          </tr>
-          <th>Description</th>
-          </ul>
+       
       </table>
       </div>
     </div>

@@ -13,12 +13,13 @@ class Teams extends Component {
 
   render() {
     return (
+      <div className="teams">
       <div className="card">
         <div className="card-body">
-        <div class="row">
+        
           <h2 className="card-title">Teams</h2>
           <button className="add-team btn btn-success"><strong>+</strong></button>
-        </div>
+        
           {this.state.teams.map(teams => (
             <TeamsList
               id={teams.id}
@@ -29,7 +30,7 @@ class Teams extends Component {
           ))}
         </div>
       </div>
-    
+    </div>
     );
   }
 }

@@ -2,9 +2,9 @@ import React from "react";
 import "./TeamsList.css";
 
 const TeamsList = props => (
-<div>
+<div className="teams-list">
       <img
-        className="rounded-circle"
+        className=""
         alt={props.name}
         src={props.image}
         height="50"

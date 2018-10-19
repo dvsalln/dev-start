@@ -2,21 +2,18 @@ import React from "react";
 import "./FriendList.css";
 
 const FriendList = props => (
-  <div className="col-sm-12">
-    <div className="col-sm-4">
+<div className="friends-list">
       <img
-        className="rounded-circle"
+        className=""
         alt={props.name}
         src={props.image}
         height="50"
         width="50"
       />
-    </div>
-    <div className="col-8">
+    
       <p>
         <strong /> {props.name}
       </p>
-    </div>
   </div>
 );
 

@@ -5,6 +5,7 @@ import ColumnOne from "./ColumnOne/ColumnOne";
 import ColumnTwo from "./ColumnTwo/ColumnTwo";
 import ColumnThree from "./ColumnThree/ColumnThree";
 
+
  
 class Dashboard extends Component {
   render() {
@@ -12,8 +13,9 @@ class Dashboard extends Component {
 
     <div className="container">
     <Header />
+   
       <div className="row">
-        
+     
           <ColumnOne />
         
       
