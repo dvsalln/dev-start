@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileHeader from "./ProfileHeader";
-import Nav from "./Nav";
 import "./ColumnOne.css";
+import Nav from "./Nav";
 
 
 const ColumnOne = () => (
