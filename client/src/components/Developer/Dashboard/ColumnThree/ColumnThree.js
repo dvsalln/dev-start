@@ -1,12 +1,17 @@
 import React from "react";
+import Friends from "./Friends";
+import Teams from "./Teams";
 import "./ColumnThree.css";
 
-const ColumnThree = () => {
-  return (
-    <div className="col-md-4">
-    <img src="http://placehold.it/800x800?text=3" alt="" />
+const ColumnThree = () => (
+  <div class=".col-sm-4">
+    <div className="column-three">
+      <div className="col-4">
+      <Teams />
+      <Friends />
+      </div>
+    </div>
   </div>
-  );
-};
+);
 
 export default ColumnThree;

@@ -20,7 +20,9 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "if-env": "^1.0.4",
-    "react-columns": "^1.2.0"
+    "react-columns": "^1.2.0",
+    "react-router-dom": "^4.3.1",
+    "reactstrap": "^6.5.0"
   },
   "repository": {
     "type": "git",
