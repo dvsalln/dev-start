@@ -9,13 +9,13 @@ import ColumnThree from "./ColumnThree/ColumnThree";
 const Dashboard = () => {
   return (
 
-    <div className="dashboard">
+    <div className="container">
+      <div className="row">
       <Header />
       <ColumnOne />
       <ColumnTwo />
       <ColumnThree />
-   
-   
+      </div>
     </div>
   )
 }

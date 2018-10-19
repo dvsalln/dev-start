@@ -4,9 +4,9 @@ import Teams from "./Teams";
 import "./ColumnThree.css";
 
 const ColumnThree = () => (
-  <div class=".col-sm-4">
+  <div class="col-sm-12">
     <div className="column-three">
-      <div className="col-4">
+      <div className="col-sm-4">
       <Teams />
       <Friends />
       </div>

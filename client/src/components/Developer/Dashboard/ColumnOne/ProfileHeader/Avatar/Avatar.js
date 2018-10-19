@@ -5,10 +5,10 @@ const Avatar = () => (
   <div>
     <img
       className="rounded-circle"
-      src="https://via.placeholder.com/150x150"
+      src="https://via.placeholder.com/175x175"
       alt="avatar-example"
-      width="200"
-      height="200"
+      width="175"
+      height="175"
     />
   </div>
 );
