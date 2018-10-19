@@ -13,13 +13,13 @@ class Friends extends Component {
 
   render() {
     return (
-    
+    <div className="friends">
       <div className="card">
         <div className="card-body">
-        <div class="row">
+        
           <h2 className="card-title">Friends</h2>
-          <button className="add-team btn btn-success"><strong>+</strong></button>
-        </div>
+          <button className="add-friend btn btn-success"><strong>+</strong></button>
+        
           {this.state.friends.map(friend => (
             <FriendList
               id={friend.id}
@@ -30,7 +30,7 @@ class Friends extends Component {
           ))}
         </div>
       </div>
-     
+     </div>
     );
   }
 }

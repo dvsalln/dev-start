@@ -6,14 +6,19 @@ import SignUpForm from "./components/SignUp";
 import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
 import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
+
 //Global CSS Style
 import "./css/ds-global.css";
 
 class App extends Component {
+
   render() {
+   
     return (
       <Router>
+        
         <div>
+       
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={SignUpForm} />
           <Route path="/developer/dashboard" component={DeveloperDashboard} />

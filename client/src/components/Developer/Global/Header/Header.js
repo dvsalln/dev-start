@@ -1,10 +1,14 @@
 import React from "react";
 import "./Header.css";
+import DrawerToggle from '../SideDrawer/DrawerToggle';
+
 
 const Header = () => (
   <header>
     <div>
+      
       <nav className="navbar bg-ds-blue fixed-top">
+      <DrawerToggle />
         {/* add router to the anchor tag */}
         <a className="navbar-brand">
           <span className="devstart-brand">DevStart</span>

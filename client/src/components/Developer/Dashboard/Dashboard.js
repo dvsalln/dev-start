@@ -7,13 +7,17 @@ import ColumnThree from "./ColumnThree/ColumnThree";
 
  
 class Dashboard extends Component {
+
   render() {
+
     return (
 
     <div className="container">
     <Header />
+  
       <div className="row">
-        
+     
+     
           <ColumnOne />
         
       
