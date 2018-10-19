@@ -1,13 +1,13 @@
 import React from "react";
 import ProfileHeader from "./ProfileHeader";
 import "./ColumnOne.css";
-import Nav from "./Nav";
+import QuickStart from "./QuickStart";
 
 
 const ColumnOne = () => (
     <div class="col-3">
         <ProfileHeader />
-        <Nav />
+        <QuickStart />
     </div>
   );
 

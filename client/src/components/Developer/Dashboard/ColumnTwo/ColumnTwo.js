@@ -4,8 +4,10 @@ import Proposals from "./Proposals";
 
 const ColumnTwo = () => (
       <div className="col-6">
+      
       <Proposals />
       </div>
+      
     
 );
 
