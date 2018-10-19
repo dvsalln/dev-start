@@ -12,28 +12,31 @@ class Proposals extends Component {
   }
 
   render () {
-    return (
-    <div className="card">
-      <div className="card-body">
-        <h2 className="card-title">Available Proposals</h2>
-        {/* Below are hard coded. Replace with props with linked with BE */}
-        <h5 className="card-subtitle mb-2">Here's a list of recentely posted Jobs </h5>
-        <p className="card-text">Use keywords to refine your search</p>
-        <form className="search">
-        <input
-          placeholder="Search for..."
-          ref={input => this.search = input}
-          onChange={this.handleInputChange}
-        />
-        <button className="search btn btn-success">Search</button>
-        <p>{this.state.query}</p>
-      </form>
-      <hr></hr>
-      <table>
-       
-      </table>
+
+      return (
+        <div className="proposals">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title">Available Proposals</h2>
+              {/* Below are hard coded. Replace with props with linked with BE */}
+              <h5 className="card-subtitle mb-2">Here's a list of recentely posted Jobs </h5>
+              <p className="card-text">Use keywords to refine your search</p>
+              <form className="search">
+              <input
+                placeholder="Search for..."
+                ref={input => this.search = input}
+                onChange={this.handleInputChange}
+              />
+              <button className="search btn btn-success">Search</button>
+              <p>{this.state.query}</p>
+            </form>
+            <hr></hr>
+            <table>
+            
+            </table>
+            </div>
+          </div>
       </div>
-    </div>
       )
     }
   }
