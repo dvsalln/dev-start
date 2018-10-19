@@ -2,8 +2,7 @@ import React from "react";
 import "./TeamsList.css";
 
 const TeamsList = props => (
-  <div className="col-sm-12">
-    <div className="col-lg-12">
+<div>
       <img
         className="rounded-circle"
         alt={props.name}
@@ -11,13 +10,12 @@ const TeamsList = props => (
         height="50"
         width="50"
       />
-    </div>
-    <div className="col-lg-12">
+    
+  
       <p>
         <strong /> {props.name}
       </p>
-    </div>
-  </div>
+</div>
 );
 
 export default TeamsList;
