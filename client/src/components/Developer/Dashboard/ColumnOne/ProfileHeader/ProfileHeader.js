@@ -4,23 +4,18 @@ import Avatar from "./Avatar";
 
 const ProfileHeader = () => (
   <div className="card">
-    <div className="row">
-      <div className="col-sm-4">
-        <Avatar />
-      </div>
-      <div className="col-8">
-        <div className="profile-header">
-          <h2 className="user-name">FirstName LastName</h2>
-          <h3 className="user-title text-muted">Full Stack Developer</h3>
+    <div className="container mt-1 mb-2">
+      <div className="row">
+        <div className="col-4">
+          <Avatar />
         </div>
-        {/* Below is hard coded and will be replaced with user's data when connect to BE */}
+        <div className="col-8">
+          <p className="user-name">FirstName</p>
+          {/* Below is hard coded and will be replaced with user's data when connect to BE */}
+        </div>
       </div>
-     </div>
-     </div>
-     
- 
-    
-  
+    </div>
+  </div>
 );
 
 export default ProfileHeader;
