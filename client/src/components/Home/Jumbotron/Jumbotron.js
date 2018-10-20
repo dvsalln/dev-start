@@ -2,10 +2,12 @@ import React from "react";
 import "./Jumbotron.css";
 
 const Jumbotron = () => (
-  <div className="jumbotron bg-ds-white">
-    <div className="container text-center">
-      <h1>DevStart</h1>
-      <h2>Helping begining developers get started</h2>
+  <div className="main-head jumbotron bg-ds-white">
+    <div className="main-content container text-center">
+      <div className="text-wrapper">
+        <h1>DevStart</h1>
+        <h2>Start your career, Start your project, Start today</h2>
+      </div>
       <p>
         <a className="btn btn-ds-primary btn-lg" href="#" role="button">
           I'm an entrepenuer
