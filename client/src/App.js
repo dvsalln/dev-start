@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home";
 //uncomment this below and the route when signup form is ready
 import SignUpForm from "./components/SignUp";
+import create from "./components/CreateProfile";
 import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
 import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
@@ -16,6 +17,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={SignUpForm} />
+          <Route exact path="/createprofile" component={create} />
           <Route path="/developer/dashboard" component={DeveloperDashboard} />
           <Route path="/developer/profile" component={DeveloperProfile} />
           <Route path="/sponsor/dashboard" component={SponsorDashboard} />
