@@ -14,49 +14,43 @@ class Dashboard extends Component {
   };
 
   drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {SideDrawerOpen: !prevState.SideDrawerOpen};
+    this.setState(prevState => {
+      return { SideDrawerOpen: !prevState.SideDrawerOpen };
     });
-  }
+  };
 
   backdropClickHandler = () => {
-    this.setState({SideDrawerOpen: false});
+    this.setState({ SideDrawerOpen: false });
   };
 
   render() {
-    
     let backdrop;
 
     if (this.state.SideDrawerOpen) {
-     
-      backdrop = <Backdrop click={this.backdropClickHandler} />
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
     return (
-    <div style={{height: '100%'}}>
-    <div className="container">
-  
+      <div style={{ height: "100%" }}>
+        <div className="container">
+          <div className="row dev-db-row">
+            <Header />
+            <SideNavPage
+              drawerToggleClickHandler={this.drawerToggleClickHandler}
+            />
+            <SideDrawer show={this.state.SideDrawerOpen} />
+            {backdrop}
 
-      <div className="row">
-      <Header />
-    <SideNavPage drawerToggleClickHandler={this.drawerToggleClickHandler} />
-    <SideDrawer show={this.state.SideDrawerOpen} />
-    {backdrop}
+            <ColumnOne />
 
-          <ColumnOne />
-        
-      
-          <ColumnTwo />
-        
-        
-          <ColumnThree />
-        
+            <ColumnTwo />
+
+            <ColumnThree />
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-    )
+    );
   }
 }
-
 
 export default Dashboard;
