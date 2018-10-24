@@ -8,7 +8,7 @@ const Header = props => (
   
       
       <nav className="navbar bg-ds-blue fixed-top">
-      <DrawerToggle />
+      <DrawerToggle click={props.drawerClickHandler} />
         {/* add router to the anchor tag */}
         <a className="navbar-brand">
           <span className="devstart-brand">DevStart</span>
