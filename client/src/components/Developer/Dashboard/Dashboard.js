@@ -28,6 +28,7 @@ class Dashboard extends Component {
 
     if (this.state.sideDrawerOpen) {
       sideDrawer = <SideDrawer />;
+
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
