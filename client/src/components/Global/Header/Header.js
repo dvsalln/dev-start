@@ -1,10 +1,14 @@
 import React from "react";
 import "./Header.css";
+import DrawerToggle from '../DrawerToggle';
 
-const Header = () => (
-  <header>
-    <div>
+
+const Header = props => (
+  <header className="header">
+  
+      
       <nav className="navbar bg-ds-blue fixed-top">
+      <DrawerToggle />
         {/* add router to the anchor tag */}
         <a className="navbar-brand">
           <span className="devstart-brand">DevStart</span>
@@ -24,7 +28,6 @@ const Header = () => (
           {/* import SignInBtn and LogInBtn here */}
         </div>
       </nav>
-    </div>
   </header>
 );
 
