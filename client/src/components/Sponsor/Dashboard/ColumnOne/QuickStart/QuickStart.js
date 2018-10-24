@@ -10,11 +10,11 @@ const QuickStart = () => (
         <p className="card-text">
           <div>
             <ul className="nav-links">
-              <a href="/">Dashboard</a>
+              <a href="/#">Home</a>
               <br />
               <a href="/">Create Proposal</a>
               <br />
-              <a href="/">Search Developers</a>
+              <a href="/">Search Devs</a>
               <br />
               <a href="/">Search Teams</a>
             </ul>

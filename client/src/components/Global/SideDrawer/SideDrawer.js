@@ -9,13 +9,13 @@ const SideDrawer = props => {
     return (
     <nav>
         <ul className={drawerClasses}>
-              <a href="/developer/dashboard">Dashboard</a>
+              <a href="/developer/dashboard">Dev Dash</a>
               <br></br>
-              <a href="/">Search Devs</a>
+              <a href="/developer/profile">My Profile</a>
               <br></br>
-              <a href="/">Search Teams</a>
+              <a href="/sponsor/dashboard">Sponsor Dash</a>
               <br></br>
-              <a href="/">Create Team</a>
+              <a href="/sponsor/profile">Sponsors</a>
           </ul>
     </nav>
     )
