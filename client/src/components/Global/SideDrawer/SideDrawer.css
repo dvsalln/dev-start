@@ -2,7 +2,7 @@
     height: 100%;
     box-shadow: 2px 0px 5px black;
     position: fixed;
-    padding: 5%;
+    padding: 5rem;
     top: 0;
     left: 0;
     width: 70%;
@@ -10,7 +10,7 @@
     z-index: 200;
     transform: translateX(-100%);
     transition: transform 0.3s ease-out;
-    background-color: #e9ebee;
+    background: #e9ebee;
 }
 
 .side-drawer.open {

@@ -9,34 +9,35 @@ import Backdrop from "../../Global/Backdrop";
 
 class Dashboard extends Component {
   state = {
-    SideDrawerOpen: true
+    sideDrawerOpen: false
   };
 
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
-      return { SideDrawerOpen: !prevState.SideDrawerOpen };
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
 
   backdropClickHandler = () => {
-    this.setState({ SideDrawerOpen: false });
+    this.setState({ sideDrawerOpen: false });
   };
 
   render() {
     let backdrop;
     let sideDrawer;
 
-    if (this.state.SideDrawerOpen) {
+    if (this.state.sideDrawerOpen) {
+      sideDrawer = <SideDrawer />;
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
 
     return (
       <div class="container-flex">
-      <div style={{ height: "100%" }}>
+      <div style={{ height: '100%' }}>
         <div className="wrapper">
           <div className="row dev-db-row">
-            <Header drawerToggleClickHandler={this.drawerToggleClickHandler}/>
-            <SideDrawer show={this.state.SideDrawerOpen} />
+            <Header drawerClickHandler={this.drawerToggleClickHandler}/>
+            <SideDrawer show={this.state.sideDrawerOpen} />
             {backdrop}
             {sideDrawer}
             <ColumnOne />

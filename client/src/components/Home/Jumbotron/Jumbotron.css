@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   background-image: url("../../../images/ai-close-up-code-160107.jpg");
-  height: 600px;
+  height: 100%;
   background-size: cover;
 }
 
@@ -16,10 +16,13 @@
 
 .main-content h1 {
   font-size: 4.5rem;
+  color: #F5B219;
+
 }
 
 .main-content h2 {
   font-size: 38px;
+  
 }
 
 .text-wrapper {
@@ -28,4 +31,13 @@
 
 .main-content p {
   margin-top: 60px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #F5B219;
+}
+
+a {
+  margin-left: 20px;
 }

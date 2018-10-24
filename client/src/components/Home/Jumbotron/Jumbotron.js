@@ -6,14 +6,14 @@ const Jumbotron = () => (
     <div className="main-content container text-center">
       <div className="text-wrapper">
         <h1>DevStart</h1>
-        <h2>Start your career, Start your project, Start today</h2>
+        <h2>Start a career, Start a project, Start today</h2>
       </div>
       <p>
-        <a className="btn btn-ds-primary btn-lg" href="#" role="button">
-          I'm an entrepenuer
+        <a className="btn btn-ds-primary btn-lg" href="/sponsor/dashboard" role="button">
+          I'm a sponsor
         </a>
-        <a className="btn btn-ds-primary btn-lg" href="#" role="button">
-          I'm a starting developer
+        <a className="btn btn-ds-primary btn-lg" href="/developer/dashboard" role="button">
+          I'm a developer
         </a>
       </p>
     </div>
