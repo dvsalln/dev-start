@@ -9,9 +9,9 @@ const SideDrawer = props => {
     return (
     <nav>
         <ul className={drawerClasses}>
-              <a href="/">Dashboard</a>
+              <a href="/developer/dashboard">Dashboard</a>
               <br></br>
-              <a href="/">Search Developers</a>
+              <a href="/">Search Devs</a>
               <br></br>
               <a href="/">Search Teams</a>
               <br></br>
