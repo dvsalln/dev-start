@@ -1,8 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-  const Proposal = sequelize.define("Proposal", {
+  const Proposals = sequelize.define("Proposals", {
+    proposalId: DataTypes.INTEGER,
     title: DataTypes.STRING,
     maxBid: DataTypes.INTEGER,
     details: DataTypes.TEXT
   });
-  return Proposal;
+  return Proposals;
 };
