@@ -1,7 +1,7 @@
 import React from 'react';
 import "./DrawerToggle.css";
 
-const drawerToggle = props => (
+const DrawerToggle = props => (
     <button className="toggle-button" onClick={props.click}>
         <div className="toggle-button-line" />
         <div className="toggle-button-line" />
@@ -9,4 +9,4 @@ const drawerToggle = props => (
     </button>
 );
 
-export default drawerToggle;
+export default DrawerToggle;
