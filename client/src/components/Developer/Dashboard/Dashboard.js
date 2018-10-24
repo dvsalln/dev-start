@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./Dashboard.css";
-import Header from "../Global/Header/Header";
+import Header from "../../Global/Header"
 import ColumnOne from "./ColumnOne/ColumnOne";
 import ColumnTwo from "./ColumnTwo/ColumnTwo";
 import ColumnThree from "./ColumnThree/ColumnThree";
-import SideDrawer from "../Global/SideDrawer/SideDrawer";
-import Backdrop from "../Global/Backdrop/Backdrop";
+import SideDrawer from "../../Global/SideDrawer";
+import Backdrop from "../../Global/Backdrop";
 
 class Dashboard extends Component {
   state = {
