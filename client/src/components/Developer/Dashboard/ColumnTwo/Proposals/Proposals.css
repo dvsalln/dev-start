@@ -1,3 +1,13 @@
 .proposals {
     height: 1200px;
 }
+
+#apply-btn {
+    margin-left: 10px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+#save-btn {
+    margin-left: 10px;
+    border-radius: 50px 50px 50px 50px;
+}
