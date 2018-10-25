@@ -18,7 +18,7 @@ class Friends extends Component {
         <div className="card-body">
         
           <h2 className="card-title">Friends</h2>
-          <button className="add-friend btn btn-success"><strong>+</strong></button>
+          <button className="add-friend btn btn-primary"><strong>+</strong></button>
         
           {this.state.friends.map(friend => (
             <FriendList

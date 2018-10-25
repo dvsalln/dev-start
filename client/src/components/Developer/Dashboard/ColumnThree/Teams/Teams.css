@@ -7,3 +7,7 @@
 .teams {
     text-align: center;
 }
+
+.add-team:hover {
+    color: #F5B219;
+}

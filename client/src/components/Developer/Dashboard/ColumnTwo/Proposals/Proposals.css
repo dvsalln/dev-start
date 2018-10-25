@@ -3,11 +3,13 @@
 }
 
 #apply-btn {
+    cursor: pointer;
     margin-left: 10px;
     border-radius: 50px 50px 50px 50px;
 }
 
 #save-btn {
+    cursor: pointer;
     margin-left: 10px;
     border-radius: 50px 50px 50px 50px;
 }
