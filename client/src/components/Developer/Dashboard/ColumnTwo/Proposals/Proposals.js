@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./Proposals.css";
 class Proposals extends Component {
   state ={
     query: '',
@@ -12,6 +12,8 @@ class Proposals extends Component {
   }
 
   render () {
+    let proposal;
+
 
       return (
         <div className="proposals">
@@ -27,13 +29,62 @@ class Proposals extends Component {
                 ref={input => this.search = input}
                 onChange={this.handleInputChange}
               />
-              <button className="search btn btn-success">Search</button>
+              <button className="search btn btn-primary">Search</button>
               <p>{this.state.query}</p>
             </form>
             <hr></hr>
-            <table>
-            
-            </table>
+              <div class="card">
+                <div className="card-body">
+                  <div class="card-title">
+                  {proposal}
+                  <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    <button id="apply-btn" type="submit" class="btn-success">Apply</button>
+                    <button id="save-btn" class="btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div className="card-body">
+                  {proposal}
+                  <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <button id="apply-btn" type="submit" class="btn-success">Apply</button>
+                  <button id="save-btn" class="btn-primary">Save</button>
+                </div>
+              </div>
+              <div class="card">
+                <div className="card-body">
+                {proposal}
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                <button id="apply-btn" type="submit" class="btn-success">Apply</button>
+                <button id="save-btn" class="btn-primary">Save</button>
+                </div>
+              </div>
+              <div class="card">
+                <div className="card-body">
+                {proposal}
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                <button id="apply-btn" type="submit" class="btn-success">Apply</button>
+                <button id="save-btn" class="btn-primary">Save</button>
+                </div>
+              </div>
+              <div class="card">
+                <div className="card-body">
+                {proposal}
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                <button id="apply-btn" type="submit" class="btn-success">Apply</button>
+                <button id="save-btn" class="btn-primary">Save</button>
+                </div>
+              </div>
             </div>
           </div>
       </div>
