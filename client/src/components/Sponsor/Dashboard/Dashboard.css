@@ -1,3 +1,10 @@
-.dashboard {
-  padding-top: 100px;
+
+.dev-db-row {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.wrapper {
+  padding: 2rem;
+  
 }

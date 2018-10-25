@@ -6,7 +6,7 @@ const Jumbotron = () => (
     <div className="main-content container text-center">
       <div className="text-wrapper">
         <h1>DevStart</h1>
-        <h2>Start a career, Start a project, Start today</h2>
+        <h2>Start a project, Start a career, Start today</h2>
       </div>
       <p>
         <a className="btn btn-ds-primary btn-lg" href="" role="button">
