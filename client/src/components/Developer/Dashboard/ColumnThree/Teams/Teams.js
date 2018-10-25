@@ -18,7 +18,7 @@ class Teams extends Component {
         <div className="card-body">
         
           <h2 className="card-title">Teams</h2>
-          <button className="add-team btn btn-success"><strong>+</strong></button>
+          <button className="add-team btn btn-primary"><strong>+</strong></button>
         
           {this.state.teams.map(teams => (
             <TeamsList

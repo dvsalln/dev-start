@@ -7,3 +7,7 @@
 .friends {
     text-align: center;
 }
+
+.add-friend:hover {
+    color: #F5B219;
+}
