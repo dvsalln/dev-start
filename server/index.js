@@ -1,5 +1,5 @@
 // Test insert to DB
-// const seedDb = require("./models/seed").seedDb;
+const seedDb = require("./models/seed").seedDb;
 //
 // Initialize Express
 const express = require("express");
@@ -60,7 +60,7 @@ class App {
   }
   run() {
     this.server.listen(this.port, () => {
-      console.log(`🌎 ==> Server now on port ${this.port}!`);
+      console.log(`Server listening on port ${this.port}`);
     });
   }
 }
