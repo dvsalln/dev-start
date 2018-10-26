@@ -13,10 +13,10 @@ const AccountBtn = () => (
       Account
     </Link>
     <div class="dropdown-menu" aria-labelledby="dropdown01">
-      <Link to="/edit-profile" className="dropdown-item">
+      <Link to="/developer/profile" className="dropdown-item">
         Edit Profile
       </Link>
-      <Link to="/account-settings" className="dropdown-item">
+      <Link to="/developer/dashboard" className="dropdown-item">
         Account Settings
       </Link>
       {/* Add more dropdown list if needed */}
