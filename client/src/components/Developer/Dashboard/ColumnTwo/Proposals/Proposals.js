@@ -32,7 +32,6 @@ class Proposals extends Component {
               <button className="search btn btn-primary">Search</button>
               <p>{this.state.query}</p>
             </form>
-            
             <hr></hr>
               <div class="card">
                 <div className="card-body">

@@ -22,6 +22,6 @@ const user = new Schema({
     ratings: Array,
     avgRating: Number
   },
-  Friends: Array,
-  Teams: Array
+  friends: Array,
+  teams: Array
 });

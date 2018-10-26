@@ -48,7 +48,6 @@ class Form extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    
   };
   render() {
     return (

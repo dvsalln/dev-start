@@ -5,7 +5,7 @@ class LogInBtn extends Component {
 
   render() {
     return (
-      <button type="button" id="login-btn" className="btn btn-ds-primary btn-md">
+      <button type="button" class="btn btn-outline-primary">
         Log In
       </button>
     );
