@@ -1,7 +1,8 @@
 import React from "react";
 import "./Header.css";
 import DrawerToggle from '../DrawerToggle';
-
+import SignUpBtn from "../SignUpBtn"
+import LogInBtn from "../LogInBtn";
 
 const Header = props => (
   <header className="header">
@@ -9,6 +10,8 @@ const Header = props => (
       
       <nav className="navbar bg-ds-blue fixed-top">
       <DrawerToggle click={props.drawerClickHandler} />
+      <SignUpBtn />
+      <LogInBtn />
         {/* add router to the anchor tag */}
         <a className="navbar-brand">
           <span className="devstart-brand">DevStart</span>
@@ -25,7 +28,7 @@ const Header = props => (
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse">
-          {/* import SignInBtn and LogInBtn here */}
+      
         </div>
       </nav>
   </header>
