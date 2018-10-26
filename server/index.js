@@ -1,5 +1,5 @@
 // Test insert to DB
-const seedDb = require("./models/seed").seedDb;
+const db = connect("localhost:3000/users")
 //
 // Initialize Express
 const express = require("express");
