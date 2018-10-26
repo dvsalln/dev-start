@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../Global/Header";
+import Header from "../Home/Header";
 import Jumbotron from "../Home/Jumbotron";
 import "./Home.css";
 
