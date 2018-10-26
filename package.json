@@ -4,13 +4,19 @@
   "description": "This is a platform to make a community with beginner developers and entrepreneurs. Entrepreneurs can post their project ideas such as homepage, web application, mobile application, and software. Beginner developers can create their profile page and also create group/groups to take a project together.",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn run server\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && yarn install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "setup": "yarn install && cd client && yarn install",
+    "build": "node internals/scripts/build.js",
+    "deploy": "yarn build && yarn checkout",
+    "checkout": "git checkout -b deploy && yarn run add",
+    "add": "git add -f client/build && yarn run commit",
+    "commit": "git commit -m \"deploy\" && yarn run push",
+    "push": "git push -f heroku deploy:master && yarn run master",
+    "master": "git checkout master && yarn run delete",
+    "delete": "git branch -D deploy",
+    "start": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
+    "client": "node internals/scripts/client.js",
+    "server": "nodemon --watch server server/index.js",
+    "server-prod": "node server/index.js"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
