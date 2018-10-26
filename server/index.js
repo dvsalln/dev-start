@@ -1,5 +1,5 @@
 // Test insert to DB
-const seedDb = require("./models/seed").seedDb;
+// const seedDb = require("./models/seed").seedDb;
 //
 // Initialize Express
 const express = require("express");
@@ -31,7 +31,8 @@ class App {
   initDb() {
     try {
       this.db = mongoose.connect(
-        process.env.MONGODB_URI || "your_local_mongo_uri_here",
+        process.env.MONGODB_URI ||
+          "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
         { useNewUrlParser: true } // Helps us avoid deprecation errors.
       );
       console.log("Successfully connected to database.");
@@ -59,7 +60,7 @@ class App {
   }
   run() {
     this.server.listen(this.port, () => {
-      console.log(`🌎 ==> Server now on port ${PORT}!`);
+      console.log(`🌎 ==> Server now on port ${this.port}!`);
     });
   }
 }
