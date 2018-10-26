@@ -67,7 +67,7 @@ const db = require("../models");
 
 // Unfriend (Update)
     app.put("/api/friend/delete", function(req, res) {
-        db.Friends.update(
+        db.Friends.destroy(
         req.body,
         {
             where: {
