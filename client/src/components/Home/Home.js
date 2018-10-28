@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import Header from "../Home/Header";
+import React, { Component, Fragment } from "react";
+import HomeHeader from "../Global/HomeHeader";
 import Jumbotron from "../Home/Jumbotron";
 import "./Home.css";
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <Header />
+      <Fragment>
+        <HomeHeader />
         <Jumbotron />
-      </div>
+      </Fragment>
     );
   }
 }

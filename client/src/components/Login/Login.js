@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import BigWrapper from "../SignUp/BigWrapper";
 import MiniWrapper from "../SignUp/MiniWrapper";
 import BrandSmall from "../SignUp/BrandSmall";
+import HomeHeader from "../Global/HomeHeader";
 // import SocialButton from "./SocialButton";
 import "./Login.css";
 
@@ -44,72 +45,75 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container-flex">
-        <BigWrapper>
-          <MiniWrapper>
-            <div>
-              <BrandSmall />
+      <Fragment>
+        <HomeHeader />
+        <div className="container-flex loginform-wrapper">
+          <BigWrapper>
+            <MiniWrapper>
+              <div>
+                <BrandSmall />
 
-              <div id="LoginForm">
-                <div className="container">
-                  <div className="login-form">
-                    <div className="main-div">
-                      <div className="panel">
-                        <h4>User Login</h4>
-                        <p>Please enter your email and password</p>
+                <div id="LoginForm">
+                  <div className="container">
+                    <div className="login-form">
+                      <div className="main-div">
+                        <div className="panel">
+                          <h4>User Login</h4>
+                          <p>Please enter your email and password</p>
+                        </div>
+                        <form id="Login">
+                          <div className="form-group">
+                            <input
+                              type="email"
+                              className="form-control"
+                              id="inputEmail"
+                              placeholder="Email Address"
+                            />
+                          </div>
+
+                          <div className="form-group">
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="inputPassword"
+                              placeholder="Password"
+                            />
+                          </div>
+                          <div className="something">
+                            <a href="reset.html">Forgot password?</a>
+                          </div>
+                          <div className="something">
+                            <a href="signup.html">
+                              Dont have an Account ? Sign Up here
+                            </a>
+                          </div>
+                          <button type="submit" className="btn btn-primary">
+                            Login
+                          </button>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={this.handleClick}
+                          >
+                            <i className="fab fa-facebook-square mr-1" />
+                            Login with facebook{" "}
+                          </button>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={this.handleClick}
+                          >
+                            <i className="fab fa-github mr-1" />
+                            Login with github{" "}
+                          </button>
+                        </form>
                       </div>
-                      <form id="Login">
-                        <div className="form-group">
-                          <input
-                            type="email"
-                            className="form-control"
-                            id="inputEmail"
-                            placeholder="Email Address"
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <input
-                            type="password"
-                            className="form-control"
-                            id="inputPassword"
-                            placeholder="Password"
-                          />
-                        </div>
-                        <div className="something">
-                          <a href="reset.html">Forgot password?</a>
-                        </div>
-                        <div className="something">
-                          <a href="signup.html">
-                            Dont have an Account ? Sign Up here
-                          </a>
-                        </div>
-                        <button type="submit" className="btn btn-primary">
-                          Login
-                        </button>
-                        <button
-                          className="btn btn-secondary"
-                          onClick={this.handleClick}
-                        >
-                          <i className="fab fa-facebook-square mr-1" />
-                          Login with facebook{" "}
-                        </button>
-                        <button
-                          className="btn btn-secondary"
-                          onClick={this.handleClick}
-                        >
-                          <i className="fab fa-github mr-1" />
-                          Login with github{" "}
-                        </button>
-                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </MiniWrapper>
-        </BigWrapper>
-      </div>
+            </MiniWrapper>
+          </BigWrapper>
+        </div>
+      </Fragment>
     );
   }
 }

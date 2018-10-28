@@ -25,3 +25,7 @@
   border: 3px solid red;
   outline: none;
 }
+
+.signupform-wrapper {
+  margin: 118px;
+}

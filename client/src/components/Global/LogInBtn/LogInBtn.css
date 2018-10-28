@@ -1,5 +1,7 @@
 .btn-ds-primary:hover {
+  color: #f5b219;
+}
 
-    color: #F5B219;
-
+.log-in-btn {
+  border: none;
 }
