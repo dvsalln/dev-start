@@ -1,20 +1,59 @@
-const mongoose = require('mongoose');
-const Product = require('../models/product');
+const mongoose = require("mongoose");
+const Developer = require("./index");
 
 // Below is an example of a method that seeds your database
 // Customize it to fit your needs, and execute it by calling it on a custom route
 // Make sure to create your schemas and plug them in - this code won't work!
 exports.seedDb = () => {
-    try {
-        Product.insertMany( [
-           { _id: new mongoose.Types.ObjectId(), item: "card", price: Math.floor(Math.random()*50), qty: 15, desc: 'you will love sending your mail with this'  },
-           { _id: new mongoose.Types.ObjectId(), item: "envelope", price: Math.floor(Math.random()*50), qty: 20, desc: 'what is this, a post office?' },
-           { _id: new mongoose.Types.ObjectId(), item: "stamps" , price: Math.floor(Math.random()*50), qty: 30, desc: 'write you are!' },
-           { _id: new mongoose.Types.ObjectId(), item: "notepad" , price: Math.floor(Math.random()*50), qty: 30, desc: 'Jot to your hearts content' },
-           { _id: new mongoose.Types.ObjectId(), item: "bubble wrap", price: Math.floor(Math.random()*50), qty: 30, desc: '*Pop*' }
-        ]).then((docs) => console.log('Success!', docs))
-     } catch (e) {
-        console.log (e);
-     }
-
-}
+  try {
+    Developer.insertMany([
+      {
+        _id: new mongoose.Types.ObjectId(),
+        firstName: "George",
+        lastName: "Edger",
+        userName: "Gedger",
+        password: "bluhbluh",
+        state: "GA",
+        isDev: true
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        firstName: "Bush",
+        lastName: "Schwart",
+        userName: "bushhhy",
+        password: "bushy",
+        state: "CA",
+        isDev: false
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        firstName: "Michael",
+        lastName: "Conning",
+        userName: "Miconny",
+        password: "mickey",
+        state: "OH",
+        isDev: true
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        firstName: "Tony",
+        lastName: "Hazelnut",
+        userName: "Tonuts",
+        password: "jerk",
+        state: "AZ",
+        isDev: false
+      },
+      {
+        _id: new mongoose.Types.ObjectId(),
+        firstName: "Art",
+        lastName: "Wood",
+        userName: "ProductManager",
+        password: "ourPM",
+        state: "CA",
+        isDev: true
+      }
+    ]).then(docs => console.log("Success!", docs));
+  } catch (e) {
+    console.log(e);
+  }
+};
