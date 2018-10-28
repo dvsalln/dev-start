@@ -1,5 +1,5 @@
 .jumbotron {
-  padding-top: 6.5rem;
+  padding-top: 10.5rem;
 }
 
 .main-head {
@@ -16,8 +16,7 @@
 
 .main-content h1 {
   font-size: 4.5rem;
-  color: #F5B219;
-
+  color: #f5b219;
 }
 
 .main-content h2 {
@@ -26,16 +25,18 @@
 }
 
 .text-wrapper {
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-content p {
-  margin-top: 60px;
+  margin: 60px;
 }
 
 a:hover {
   text-decoration: none;
-  color: #F5B219;
+  color: #f5b219;
 }
 
 a {
