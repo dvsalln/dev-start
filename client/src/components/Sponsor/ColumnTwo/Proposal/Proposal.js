@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Proposals extends Component {
+class Proposal extends Component {
   state = {
     query: ""
   };
@@ -40,4 +40,4 @@ class Proposals extends Component {
   }
 }
 
-export default Proposals;
+export default Proposal;

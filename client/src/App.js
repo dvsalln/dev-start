@@ -8,6 +8,7 @@ import create from "./components/CreateProfile";
 import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
 import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
+import CreateNewProposal from "./components/Sponsor/CreateNewProposal";
 //Global CSS Style
 import "./css/ds-global.css";
 
@@ -23,6 +24,10 @@ class App extends Component {
           <Route path="/developer/dashboard" component={DeveloperDashboard} />
           <Route path="/developer/profile" component={DeveloperProfile} />
           <Route path="/sponsor/dashboard" component={SponsorDashboard} />
+          <Route
+            path="/sponsor/create_proposal"
+            component={CreateNewProposal}
+          />
         </div>
       </Router>
     );

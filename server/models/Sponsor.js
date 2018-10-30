@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const timestampPlugin = require("./plugins/timestamp");
 const SponsorSchema = new mongoose.Schema({
+  _id: mongoose.Schema.ObjectId,
   firstName: {
     type: String,
     required: true
