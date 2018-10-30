@@ -3,14 +3,18 @@ import "../SignUp.css";
 import BrandSmall from "../BrandSmall";
 import SelectState from "../SelectState";
 import ReactDOM from "react-dom";
+import "./Form.css";
+import AccountDataService from "../AccountDataService";
+
 class Form extends Component {
   state = {
-    name: "",
-    username: "",
+    firstName: "",
+    lastName: "",
+    userName: "",
     email: "",
     password: "",
     state: "",
-    isdeveloper: true,
+    isDev: true,
     skills: {
       //set of skills
     },
@@ -19,16 +23,20 @@ class Form extends Component {
     },
     rating: 0,
     valid: {
-      name: "",
-      username: "",
+      firstName: "",
+      lastName: "",
+      userName: "",
       password: "",
       re_password: "",
       email: "",
       state: "",
-      isdeveloper: true,
+      isDev: true,
       skills: {}
     }
   };
+
+  createAccount = new AccountDataService();
+
   handleEmail = event => {
     const { name, value } = event.target;
     const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -44,11 +52,17 @@ class Form extends Component {
     });
   };
   setPost = value => {
-    this.setState({ isdeveloper: value });
+    this.setState({ isDev: value });
   };
+
   handleSubmit = event => {
     event.preventDefault();
+    console.log(
+      "ok, submit button is clicked and going to execute createAccount"
+    );
+    this.createAccount.sendData(this.state);
   };
+
   render() {
     return (
       <form className="">
@@ -56,26 +70,38 @@ class Form extends Component {
         <h6> SignUp Form</h6>
         <hr />
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="firstName">First Name</label>
           <input
             type="text"
-            value={this.state.name}
+            value={this.state.firstName}
             onChange={this.handleInputChange}
-            name="name"
+            name="firstName"
             className="form-control"
-            id="name"
-            placeholder="John Doe"
+            id="firstName"
+            placeholder="John"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            value={this.state.lastName}
+            onChange={this.handleInputChange}
+            name="lastName"
+            className="form-control"
+            id="lastName"
+            placeholder="Doe"
           />
         </div>
         <div className="form-group">
           <label htmlFor="name">Username</label>
           <input
             type="text"
-            value={this.state.username}
+            value={this.state.userName}
             onChange={this.handleInputChange}
-            name="username"
+            name="userName"
             className="form-control"
-            id="username"
+            id="userName"
             placeholder="spiderman"
           />
         </div>
@@ -106,7 +132,7 @@ class Form extends Component {
         </div>
         <label className="mr-2">State </label>
         <select
-          className="mr-5"
+          className="mr-5 selectState"
           name="state"
           value={this.state.state}
           onChange={this.handleInputChange}
@@ -118,7 +144,7 @@ class Form extends Component {
           name="designation"
           onClick={() => this.setPost(false)}
           className="mr-1"
-          value={this.state.isdeveloper}
+          value={this.state.isDev}
         />
         <label className="mr-3"> I am a sponser </label>
         <input
@@ -126,7 +152,7 @@ class Form extends Component {
           name="designation"
           onClick={() => this.setPost(true)}
           className="mr-1"
-          value={this.state.isdeveloper}
+          value={this.state.isDev}
         />
         <label className="mr-3"> I am developer </label>
         <hr />

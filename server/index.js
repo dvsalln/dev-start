@@ -4,9 +4,10 @@ const seedDb = require("./models/seed").seedDb;
 // Initialize Express
 const express = require("express");
 const app = express();
+// const router = app.Router(); ///   to use router as sub division
 
 // Import routes
-const router = require("./router");
+const router = require("./routers/router.js");
 
 // Import Node native modules
 const http = require("http");
@@ -33,7 +34,10 @@ class App {
       this.db = mongoose.connect(
         process.env.MONGODB_URI ||
           "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
-        { useNewUrlParser: true } // Helps us avoid deprecation errors.
+        {
+          useNewUrlParser: true,
+          useFindAndModify: false
+        } // Helps us avoid deprecation errors.
       );
       console.log("Successfully connected to database.");
     } catch (error) {

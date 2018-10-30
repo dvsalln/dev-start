@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const timestampPlugin = require("./plugins/timestamp");
 const DeveloperSchema = new mongoose.Schema({
+  _id: mongoose.Schema.ObjectId,
   firstName: {
     type: String,
     required: true
@@ -13,7 +14,7 @@ const DeveloperSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  email: {
+  emailAddress: {
     type: String,
     required: true
   },
@@ -25,9 +26,9 @@ const DeveloperSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  idDev: {
+  isDev: {
     type: Boolean,
-    default: false
+    default: true
   }
 });
 

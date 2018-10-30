@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
@@ -32,5 +33,10 @@
     "client": "node internals/scripts/client.js",
     "server": "nodemon --watch server server/index.js",
     "server-prod": "node server/index.js"
+  },
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:3090"
+    }
   }
 }
