@@ -7,7 +7,11 @@ const Websites = () => (
       {/* Below are hard coded. Replace with props with linked with BE */}
       <p className="card-text">
         GitHub URL:{" "}
-        <a href="https://github.com/artawood" target="blank" class="card-link">
+        <a
+          href="https://github.com/artawood"
+          target="blank"
+          className="card-link"
+        >
           https://github.com/artawood
         </a>
       </p>
@@ -16,14 +20,14 @@ const Websites = () => (
         <a
           href="https://linkedIn.com/in/artawood"
           target="blank"
-          class="card-link"
+          className="card-link"
         >
           https://linkedIn.com/in/artawood
         </a>
       </p>
       <p className="card-text">
         Portfolio URL:{" "}
-        <a href="http://www.artawood.net" target="blank" class="card-link">
+        <a href="http://www.artawood.net" target="blank" className="card-link">
           http://www.artawood.net
         </a>
       </p>

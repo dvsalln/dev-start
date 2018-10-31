@@ -2,9 +2,9 @@ import React from "react";
 import "./Skills.css";
 
 const Skills = () => (
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Skills</h2>
+  <div className="card">
+    <div className="card-body">
+      <h2 className="card-title">Skills</h2>
       {/* Below are hard coded. Replace with props with linked with BE */}
       <ul className="list-group list-group-flush">
         <li className="list-group-item">
