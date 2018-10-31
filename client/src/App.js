@@ -9,8 +9,6 @@ import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
 import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
 import CreateNewProposal from "./components/Sponsor/CreateNewProposal";
-//Global CSS Style
-import "./css/ds-global.css";
 
 class App extends Component {
   render() {
