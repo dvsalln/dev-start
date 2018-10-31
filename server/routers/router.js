@@ -1,5 +1,6 @@
 const path = require("path");
 const developer = require("../controllers/developerController.js");
+const sponsor = require("../controllers/sponsorController.js");
 
 module.exports = function(app) {
   // Ensures your react app is being served at all times
@@ -25,6 +26,33 @@ module.exports = function(app) {
     console.log("let's see what request's body is: ", req.body);
     developer
       .devAccountprocess(req.body)
+      .then(function(data) {
+        console.log("successfully create/update developer account.");
+        res.json(data);
+      })
+      .catch(function(err) {
+        // If an error occurred, send it to the client
+        res.json(err);
+      });
+  });
+
+  app.get("/api/sponsor/account", function(req, res, next) {
+    sponsor
+      .readSponsAccount()
+      .then(function(data) {
+        console.log("successfully get accountinfo from database.");
+        res.json(data);
+      })
+      .catch(function(err) {
+        // If an error occurred, send it to the client
+        res.json(err);
+      });
+  });
+
+  app.post("/api/sponsor/account/create", function(req, res, next) {
+    console.log("let's see what request's body is: ", req.body);
+    sponsor
+      .sponsAccountprocess(req.body)
       .then(function(data) {
         console.log("successfully create/update developer account.");
         res.json(data);

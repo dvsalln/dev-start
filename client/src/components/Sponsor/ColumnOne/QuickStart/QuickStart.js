@@ -13,7 +13,7 @@ const QuickStart = () => (
           <div>
             <ul className="nav-links">
               <Link
-                to="/"
+                to="/sponsor/dashboard"
                 className={
                   window.location.pathname === "/sponsor/dashboard"
                     ? "active"
@@ -24,17 +24,17 @@ const QuickStart = () => (
               </Link>
               <br />
               <Link
-                to="/"
+                to="/sponsor/create_proposal"
                 className={
                   window.location.pathname === "/sponsor/create_proposal"
                     ? "active"
                     : "non-active"
                 }
               >
-                Search Devs
+                Create Proposal
               </Link>
               <br />
-              <a href="/">Create Team</a>
+              <a href="/">Search Devs</a>
               <br />
               <a href="/">Search Teams</a>
             </ul>

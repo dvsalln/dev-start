@@ -11,22 +11,22 @@ class Friends extends Component {
     };
   }
 
-  async componentWillMount() {
-    let res = await fetch("/api/friends", { method: "GET" });
-    let data = await res.json();
-    let newData = data.map((i, n) => {
-      return {
-        key: n,
-        uid: i.uid,
-        firstName: i.firstName,
-        lastName: i.lastName,
-        profileImg: i.profileImg
-      };
-    });
-    this.setState({
-      data: newData
-    });
-  }
+  // async componentWillMount() {
+  //   let res = await fetch("/api/friends", { method: "GET" });
+  //   let data = await res.json();
+  //   let newData = data.map((i, n) => {
+  //     return {
+  //       key: n,
+  //       uid: i.uid,
+  //       firstName: i.firstName,
+  //       lastName: i.lastName,
+  //       profileImg: i.profileImg
+  //     };
+  //   });
+  //   this.setState({
+  //     data: newData
+  //   });
+  // }
 
   render() {
     return (

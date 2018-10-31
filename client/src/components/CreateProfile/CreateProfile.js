@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import AvatarEditor from "react-avatar-editor";
 import BigWrapper from "../SignUp/BigWrapper";
 import MiniWrapper from "../SignUp/MiniWrapper";
 import Box from "./Box";
 import Row from "./Row";
 import Col from "./Col";
+import Header from "../Global/Header";
 
 import ReactDOM from "react-dom";
 import "../SignUp/SignUp.css";
@@ -51,67 +52,74 @@ class CreateProfile extends Component {
   };
   render() {
     return (
-      <div className="container-flex">
-        <BigWrapper>
-          <MiniWrapper>
-            <BrandSmall />
-            <h6>Complete your profile</h6>
-            <hr />
-            <label> Profile Picture</label>
+      <Fragment>
+        <Header />
 
-            <Box>
-              <Row>
-                <Col>
-                  <AvatarEditor
-                    ref={this.setEditorRef}
-                    image={this.state.image}
-                    width={this.state.width}
-                    height={this.state.height}
-                    border={this.state.border}
-                    color={this.state.color} // RGBA
-                    scale={this.state.scale}
-                    rotate={this.state.rotate}
-                  />
-                </Col>
-                <Col>
-                  <input
-                    type="file"
-                    onChange={this.handleFile}
-                    className="m-1"
-                  />
-                  <Box>
-                    <label>Adjust zoom</label>
-                    <input
-                      type="range"
-                      min="1"
-                      max="10"
-                      step="0.2"
-                      value={this.state.scale}
-                      onChange={this.handleRange}
-                      className="m-2"
+        <div className="container-flex">
+          <BigWrapper>
+            <MiniWrapper>
+              <BrandSmall />
+              <h6>Complete your profile</h6>
+              <hr />
+              <label> Profile Picture</label>
+
+              <Box>
+                <Row>
+                  <Col>
+                    <AvatarEditor
+                      ref={this.setEditorRef}
+                      image={this.state.image}
+                      width={this.state.width}
+                      height={this.state.height}
+                      border={this.state.border}
+                      color={this.state.color} // RGBA
+                      scale={this.state.scale}
+                      rotate={this.state.rotate}
                     />
-                  </Box>
-                  <button className="btn btn-info m-1" onClick={this.cropImage}>
-                    Save Image
-                  </button>
-                </Col>
-                <Col />
-              </Row>
-            </Box>
-            <label> Skills</label>
-            <Box>Skills</Box>
-            <label> Education</label>
-            <Box>Education</Box>
-            <button className="btn btn-info" onClick={this.fileUploadHandler}>
-              Save the information
-            </button>
-            {/* <img
+                  </Col>
+                  <Col>
+                    <input
+                      type="file"
+                      onChange={this.handleFile}
+                      className="m-1"
+                    />
+                    <Box>
+                      <label>Adjust zoom</label>
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        step="0.2"
+                        value={this.state.scale}
+                        onChange={this.handleRange}
+                        className="m-2"
+                      />
+                    </Box>
+                    <button
+                      className="btn btn-info m-1"
+                      onClick={this.cropImage}
+                    >
+                      Save Image
+                    </button>
+                  </Col>
+                  <Col />
+                </Row>
+              </Box>
+              <label> Skills</label>
+              <Box>Skills</Box>
+              <label> Education</label>
+              <Box>Education</Box>
+              <button className="btn btn-info" onClick={this.fileUploadHandler}>
+                Save the information
+              </button>
+              {/* <img
               src={this.state.test}
               style={{ width: "50px", height: "50px" }}
             /> */}
-          </MiniWrapper>
-        </BigWrapper>
-      </div>
+            </MiniWrapper>
+          </BigWrapper>
+        </div>
+      </Fragment>
     );
   }
 }
