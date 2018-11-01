@@ -41,9 +41,7 @@ class App extends Component {
           />
           <Route
             path="/developer/dashboard"
-            component={
-              this.state.isloggedin ? DeveloperDashboard : RedirectUser
-            }
+            component={this.state.isloggedin ? DeveloperDashboard : Login}
           />
           <Route
             path="/sponsor/dashboard"
