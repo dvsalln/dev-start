@@ -14,6 +14,15 @@ class Login extends Component {
     password: "",
     redirect: false
   };
+
+  componentDidMount() {
+    console.log(this.props);
+    // the best thing we can do is pass that jwt token to server ,
+    // set the status acordingly, but for now
+    const presence = window.localStorage.getItem("token");
+    this.setState({ redirect: presence ? true : false });
+  }
+
   handleSubmit = async event => {
     event.preventDefault();
     //console.log("i am pressed");
@@ -40,6 +49,7 @@ class Login extends Component {
 
   handleRedirect = () => {
     return <Redirect to="/developer/dashboard" />;
+    // A condition is needed to detrmine whether redirect to developer or sponsor's dashboard
   };
 
   handleInputChange = event => {
@@ -48,10 +58,6 @@ class Login extends Component {
     });
     console.log(this.state);
   };
-
-  componentDidMount() {
-    console.log(this.props);
-  }
 
   render() {
     return (

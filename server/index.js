@@ -7,7 +7,7 @@ const app = express();
 // const router = app.Router(); ///   to use router as sub division
 
 // Import routes
-const router = require("./router");
+const router = require("./routers/router");
 
 // Import Node native modules
 const http = require("http");
