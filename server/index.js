@@ -1,5 +1,5 @@
 // Test insert to DB
-const seedDb = require("./models/seed").seedDb;
+//const seedDb = require("./models/seed").seedDb;
 //
 // Initialize Express
 const express = require("express");
@@ -34,11 +34,14 @@ class App {
     this.initMiddleware();
     this.run();
   }
+  //mongodb://localhost:27017/userdatabase
+  //mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart
   initDb() {
     try {
       this.mongodb = mongoose.connect(
         process.env.MONGODB_URI ||
           "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
+
         {
           useNewUrlParser: true,
           useFindAndModify: false

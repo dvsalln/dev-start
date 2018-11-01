@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Dashboard.css";
-import Header from "../../Global/Header"
+import Header from "../../Global/Header";
 import ColumnOne from "./ColumnOne/ColumnOne";
 import ColumnTwo from "./ColumnTwo/ColumnTwo";
 import ColumnThree from "./ColumnThree/ColumnThree";
@@ -33,22 +33,22 @@ class Dashboard extends Component {
     }
 
     return (
-      <div class="container-flex">
-      <div style={{ height: '100%' }}>
-        <div className="wrapper">
-          <div className="row dev-db-row">
-            <Header drawerClickHandler={this.drawerToggleClickHandler}/>
-            <SideDrawer show={this.state.sideDrawerOpen} />
-            {backdrop}
-            {sideDrawer}
-            <ColumnOne />
+      <div className="container-flex">
+        <div style={{ height: "100%" }}>
+          <div className="wrapper">
+            <div className="row dev-db-row">
+              <Header drawerClickHandler={this.drawerToggleClickHandler} />
+              <SideDrawer show={this.state.sideDrawerOpen} />
+              {backdrop}
+              {sideDrawer}
+              <ColumnOne />
 
-            <ColumnTwo />
+              <ColumnTwo />
 
-            <ColumnThree />
+              <ColumnThree />
+            </div>
           </div>
         </div>
-      </div>
       </div>
     );
   }

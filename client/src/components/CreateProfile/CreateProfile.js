@@ -7,7 +7,7 @@ import Row from "./Row";
 import Col from "./Col";
 import Header from "../Global/Header";
 
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import "../SignUp/SignUp.css";
 import "./CreateProfile.css";
 import BrandSmall from "../SignUp/BrandSmall";

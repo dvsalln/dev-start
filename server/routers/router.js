@@ -2,12 +2,23 @@ const path = require("path");
 const developer = require("../controllers/developerController.js");
 const sponsor = require("../controllers/sponsorController.js");
 
+const passportService = require("../config/passport");
+const Authentication = require("../controllers/authentication");
+const passport = require("passport");
+
+const requireAuth = passport.authenticate("jwt", { session: false });
+const requireSignin = passport.authenticate("local", { session: false });
+
 module.exports = function(app) {
   // Ensures your react app is being served at all times
   app.get("*", function(req, res, next) {
     res.sendFile(__dirname, "../client/build/index.html");
   });
-
+  app.get("/api", requireAuth);
+  // If the password / username combination is correct, give the user a token. If no, don't authenticate
+  app.post("/api/signin", requireSignin, Authentication.signin);
+  // app.post("/api/createprofile", Authention.)
+  app.post("/api/signup", Authentication.signup);
   // Wire up API routes here!
   app.get("/api/developer/account", function(req, res, next) {
     developer
@@ -35,7 +46,7 @@ module.exports = function(app) {
         res.json(err);
       });
   });
-
+  //add
   app.get("/api/sponsor/account", function(req, res, next) {
     sponsor
       .readSponsAccount()

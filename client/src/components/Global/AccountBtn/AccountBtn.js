@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const AccountBtn = () => (
-  <li class="nav-item dropdown">
+  <li className="nav-item dropdown">
     <Link
       className="nav-link dropdown-toggle"
       id="dropdown01"
@@ -12,7 +12,7 @@ const AccountBtn = () => (
     >
       Account
     </Link>
-    <div class="dropdown-menu" aria-labelledby="dropdown01">
+    <div className="dropdown-menu" aria-labelledby="dropdown01">
       <Link to="/developer/profile" className="dropdown-item">
         Edit Profile
       </Link>

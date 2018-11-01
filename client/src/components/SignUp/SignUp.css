@@ -1,5 +1,5 @@
 .WrapperBig {
-  width: 36rem;
+  width: 39rem;
   /* height: 40rem; */
   margin: auto;
   margin-top: 8rem;
@@ -13,7 +13,7 @@
 }
 .WrapperMini {
   padding-top: 2rem;
-  width: 32rem;
+  width: 36rem;
   /* height: 35rem; */
   margin: auto;
 }
@@ -28,4 +28,12 @@
 
 .signupform-wrapper {
   margin: 100px;
+}
+.information a {
+  color: #f5b219;
+  font-size: 18px;
+  padding-bottom: 5em;
+}
+.buttonclass {
+  background: #f5b219;
 }

@@ -2,13 +2,13 @@ import React from "react";
 import "./Stats.css";
 
 const Stats = () => (
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">DevStart Stats</h2>
+  <div className="card">
+    <div className="card-body">
+      <h2 className="card-title">DevStart Stats</h2>
       {/* Below are hard coded. Replace with props with linked with BE */}
-      <div class="container">
-        <div class="row">
-          <div class="rating">
+      <div className="container">
+        <div className="row">
+          <div className="rating">
             <input type="radio" id="star10" name="rating" value="10" />
             <label for="star10" title="Rocks!">
               5 stars
