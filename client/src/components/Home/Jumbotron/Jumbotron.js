@@ -1,5 +1,6 @@
 import React from "react";
 import "./Jumbotron.css";
+import { Link } from "react-router-dom";
 
 const Jumbotron = () => (
   <div className="main-head jumbotron bg-ds-white">
@@ -8,14 +9,23 @@ const Jumbotron = () => (
         <h1>DevStart</h1>
         <h2>Start a project, Start a career, Start today</h2>
       </div>
-      <p>
-        <a href="/" className="btn btn-ds-primary btn-lg" href="" role="button">
+
+      <div className="main-buttons-wrapper">
+        <Link
+          to="/sponsor/dashboard"
+          className="btn btn-ds-primary btn-lg main-button"
+          role="button"
+        >
           I'm a sponsor
-        </a>
-        <a href="/" className="btn btn-ds-primary btn-lg" href="" role="button">
+        </Link>
+        <Link
+          to="/developer/dashboard"
+          className="btn btn-ds-primary btn-lg main-button"
+          role="button"
+        >
           I'm a developer
-        </a>
-      </p>
+        </Link>
+      </div>
     </div>
   </div>
 );

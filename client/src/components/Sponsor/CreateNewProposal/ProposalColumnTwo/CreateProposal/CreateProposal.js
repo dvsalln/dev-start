@@ -1,10 +1,30 @@
 import React, { Component, Fragment } from "react";
 import "./CreateProposal.css";
+import ProposalDataService from "../../../ProposalDataService";
 
 class CreateProposal extends Component {
-  // onChange function here
+  state = {
+    proposalTitle: "",
+    proposalBid: 0,
+    proposalDetails: ""
+  };
 
-  // Submit function here
+  proposalHandler = new ProposalDataService();
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+    console.log(this.state);
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log(
+      "ok, submit button is clicked and going to execute createProposal"
+    );
+    this.proposalHandler.sendData(this.state);
+  };
 
   render() {
     return (
@@ -21,15 +41,21 @@ class CreateProposal extends Component {
                     className="form-control"
                     id="proposalTitle"
                     placeholder="Proposal Title"
+                    name="proposalTitle"
+                    value={this.state.proposalTitle}
+                    onChange={this.handleInputChange}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="proposalTitle">Proposal Bid ( $ )</label>
+                  <label htmlFor="proposalBid">Proposal Bid ( $ )</label>
                   <input
                     type="text"
                     className="form-control"
-                    id="proposalTitle"
-                    placeholder="Proposal Title"
+                    id="proposalBid"
+                    placeholder="Proposal Bid"
+                    name="proposalBid"
+                    value={this.state.proposalBid}
+                    onChange={this.handleInputChange}
                   />
                 </div>
                 <div className="form-group">
@@ -38,9 +64,16 @@ class CreateProposal extends Component {
                     className="form-control"
                     id="proposalDetails"
                     rows="10"
+                    name="proposalDetails"
+                    value={this.state.proposalDetails}
+                    onChange={this.handleInputChange}
                   />
                 </div>
-                <button type="submit" className="btn btn-ds-primary">
+                <button
+                  type="submit"
+                  className="btn btn-ds-primary"
+                  onClick={this.handleSubmit}
+                >
                   Submit
                 </button>
               </form>
