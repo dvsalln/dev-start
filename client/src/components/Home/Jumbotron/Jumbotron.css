@@ -15,12 +15,13 @@
 }
 
 .main-content h1 {
-  font-size: 4.5rem;
+  margin-bottom: 2.2rem;
+  font-size: 3.8rem;
   color: #f5b219;
 }
 
 .main-content h2 {
-  font-size: 38px;
+  font-size: 44px;
   color: white;
 }
 
@@ -41,4 +42,12 @@ a:hover {
 
 a {
   margin-left: 20px;
+}
+
+.main-buttons-wrapper {
+  margin: 60px;
+}
+
+.main-button {
+  font-size: 24px;
 }

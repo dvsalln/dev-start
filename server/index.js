@@ -8,6 +8,7 @@ const app = express();
 
 // Import routes
 const router = require("./routers/router.js");
+const proposalRouter = require("./routers/proposalRouter");
 
 // Import Node native modules
 const http = require("http");
@@ -15,6 +16,9 @@ const path = require("path");
 
 // Import Mongoose
 const mongoose = require("mongoose");
+// Import mySql
+// const mysql = require("mysql");
+const sqlDb = require("./sqlDatabase/models");
 
 // Import Middleware
 const morgan = require("morgan"); // Helps us develop and debug locally
@@ -25,13 +29,14 @@ class App {
   constructor() {
     this.port = process.env.PORT || 3090;
     this.server = http.createServer(app);
+    this.server.timeout = 100000;
     this.initDb();
     this.initMiddleware();
     this.run();
   }
   initDb() {
     try {
-      this.db = mongoose.connect(
+      this.mongodb = mongoose.connect(
         process.env.MONGODB_URI ||
           "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
         {
@@ -39,6 +44,12 @@ class App {
           useFindAndModify: false
         } // Helps us avoid deprecation errors.
       );
+
+      sqlDb.sequelize.sync({ force: false }).then(function() {
+        console.log("SQL databse is connected");
+      });
+      // Put a Sequelize connection here... ex: this.sqldb = sequelize connection
+
       console.log("Successfully connected to database.");
     } catch (error) {
       console.log("Failed to connect to MongoDB.", error);
@@ -49,6 +60,7 @@ class App {
     app.use(bodyParser.json({ type: "*/*" })); // Type indicates ALL header types OK
     app.use(express.static(path.resolve(__dirname, "..", "..", "public"))); // Serve files in our Rect app public directory
     router(app);
+    proposalRouter(app);
 
     if (process.env.NODE_ENV === "production")
       app.use(express.static("client/build"));
@@ -70,3 +82,8 @@ class App {
 }
 
 new App();
+
+process.on("SIGINT", function() {
+  console.log("\nGracefully shutting down from SIGINT (Ctrl-C)");
+  process.exit();
+});
