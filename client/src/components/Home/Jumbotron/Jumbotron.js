@@ -9,10 +9,10 @@ const Jumbotron = () => (
         <h2>Start a project, Start a career, Start today</h2>
       </div>
       <p>
-        <a className="btn btn-ds-primary btn-lg" href="" role="button">
+        <a href="/" className="btn btn-ds-primary btn-lg" href="" role="button">
           I'm a sponsor
         </a>
-        <a className="btn btn-ds-primary btn-lg" href="" role="button">
+        <a href="/" className="btn btn-ds-primary btn-lg" href="" role="button">
           I'm a developer
         </a>
       </p>

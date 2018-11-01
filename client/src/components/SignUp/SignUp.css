@@ -29,3 +29,11 @@
 .signupform-wrapper {
   margin: 100px;
 }
+.information a {
+  color: #f5b219;
+  font-size: 18px;
+  padding-bottom: 5em;
+}
+.buttonclass {
+  background: #f5b219;
+}

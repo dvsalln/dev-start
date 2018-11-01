@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../SignUp.css";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 
 class SelectState extends Component {
   state = {};
