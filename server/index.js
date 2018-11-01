@@ -1,5 +1,5 @@
 // Test insert to DB
-const seedDb = require("./models/seed").seedDb;
+//const seedDb = require("./models/seed").seedDb;
 //
 // Initialize Express
 const express = require("express");
@@ -7,7 +7,7 @@ const app = express();
 // const router = app.Router(); ///   to use router as sub division
 
 // Import routes
-const router = require("./routers/router.js");
+const router = require("./router");
 
 // Import Node native modules
 const http = require("http");
@@ -29,11 +29,12 @@ class App {
     this.initMiddleware();
     this.run();
   }
+  //mongodb://localhost:27017/userdatabase
+  //mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart
   initDb() {
     try {
       this.db = mongoose.connect(
-        process.env.MONGODB_URI ||
-          "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
+        process.env.MONGODB_URI || "mongodb://localhost:27017/userdatabase",
         {
           useNewUrlParser: true,
           useFindAndModify: false
