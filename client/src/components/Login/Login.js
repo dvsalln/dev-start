@@ -135,7 +135,7 @@ class Login extends Component {
             </MiniWrapper>
           </BigWrapper>
         </div>
-        {this.state.redirect ? this.handleRedirect() : null}
+        {/* {this.state.redirect ? this.handleRedirect() : null} */}
       </div>
     );
   }

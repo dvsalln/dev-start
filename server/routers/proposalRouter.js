@@ -23,6 +23,7 @@ module.exports = function(app) {
       .then(function(data) {
         console.log("successfully loaded proposal data.", data);
         res.json(data);
+        res.send(data);
       })
       .catch(function(err) {
         // If an error occurred, send it to the client
