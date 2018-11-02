@@ -9,6 +9,7 @@ import CreateProfile from "./components/CreateProfile";
 import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
 import { RedirectUser } from "./components/Login/RedirectUser";
+import CreateNewProposal from "./components/Sponsor/CreateNewProposal";
 //Global CSS Style
 //import "./css/ds-global.css";
 
@@ -33,19 +34,28 @@ class App extends Component {
           {/* <PrivateRoute path="/createprofile" component={createProfile} /> */}
           <Route
             path="/login"
-            component={this.state.isloggedin ? Login : Login}
+            // component={this.state.isloggedin ? Login : Login}
+            component={Login}
           />
           <Route
             path="/createprofile"
-            component={this.state.isloggedin ? CreateProfile : Login}
+            // component={this.state.isloggedin ? CreateProfile : Login}
+            component={CreateProfile}
           />
           <Route
             path="/developer/dashboard"
-            component={this.state.isloggedin ? DeveloperDashboard : Login}
+            // component={this.state.isloggedin ? DeveloperDashboard : Login}
+            component={DeveloperDashboard}
           />
           <Route
             path="/sponsor/dashboard"
-            component={this.state.isloggedin ? SponsorDashboard : Login}
+            // component={this.state.isloggedin ? SponsorDashboard : Login}
+            component={SponsorDashboard}
+          />
+          <Route
+            path="/sponsor/create_proposal"
+            // component={this.state.isloggedin ? SponsorDashboard : Login}
+            component={CreateNewProposal}
           />
 
           <Route exact path="*" component={Home} />
