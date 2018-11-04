@@ -15,15 +15,24 @@ class FeedContainer extends Component {
   //   });
   // };
 
-  componenDidMount() {
+  componentDidMount() {
     // this.loadFeeds();
     fetch("http://localhost:3090/api/available_proposal/")
-      .then(res => res.json())
       .then(result => {
-        console.log(result);
-        this.setState({ query: result });
+        console.log("this is result", result);
+        return result.json();
+        //this.setQuery(JSON.parse(result.data));
+      })
+      .then(data => {
+        console.log("data", data);
+        this.setQuery(data);
       });
+    // this.setQuery(result)
   }
+
+  setQuery = result => {
+    this.setState({ query: result });
+  };
 
   // proposalApi = new ProposalData();
 
@@ -44,12 +53,13 @@ class FeedContainer extends Component {
   // };
 
   render() {
+    console.log(this.state.query);
     return (
       <div className="feed-wrapper">
         {this.state.query.map(proposal => (
           <ProposalCard
-            id={proposal.id}
-            key={proposal.id}
+            id={proposal._id}
+            key={proposal._id}
             title={proposal.proposalTitle}
           />
         ))}
