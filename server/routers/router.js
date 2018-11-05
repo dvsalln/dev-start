@@ -2,12 +2,12 @@ const path = require("path");
 const developer = require("../controllers/developerController.js");
 const sponsor = require("../controllers/sponsorController.js");
 
-const passportService = require("../config/passport");
-const Authentication = require("../controllers/authentication");
-const passport = require("passport");
+// const passportService = require("../config/passport");
+// const Authentication = require("../controllers/authentication");
+// const passport = require("passport");
 
-const requireAuth = passport.authenticate("jwt", { session: false });
-const requireSignin = passport.authenticate("local", { session: false });
+// const requireAuth = passport.authenticate("jwt", { session: false });
+// const requireSignin = passport.authenticate("local", { session: false });
 
 module.exports = function(app) {
   // Ensures your react app is being served at all times
