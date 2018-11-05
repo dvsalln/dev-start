@@ -12,7 +12,7 @@ const sponsor = require("../controllers/sponsorController.js");
 module.exports = function(app) {
   // Ensures your react app is being served at all times
   app.get("*", function(req, res, next) {
-    res.sendFile(__dirname, "../client/build/index.html");
+    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
   });
   // app.get("/api", requireAuth);
   // If the password / username combination is correct, give the user a token. If no, don't authenticate
