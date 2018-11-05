@@ -57,6 +57,7 @@ class App extends Component {
             // component={this.state.isloggedin ? SponsorDashboard : Login}
             component={CreateNewProposal}
           />
+          <Route path="/developer/profile" component={DeveloperProfile} />
 
           <Route exact path="*" component={Home} />
         </Switch>
