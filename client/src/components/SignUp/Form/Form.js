@@ -158,34 +158,34 @@ import SelectState from "../SelectState";
 import ReactDOM from "react-dom";
 import "./Form.css";
 import AccountDataService from "../AccountDataService";
-
+import axios from "axios";
 class Form extends Component {
   state = {
     firstName: "",
     lastName: "",
     userName: "",
-    email: "",
+    emailAddress: "",
     password: "",
     state: "",
-    isDev: true,
-    skills: {
-      //set of skills
-    },
-    education: {
-      //set of education
-    },
-    rating: 0,
-    valid: {
-      firstName: "",
-      lastName: "",
-      userName: "",
-      password: "",
-      re_password: "",
-      email: "",
-      state: "",
-      isDev: true,
-      skills: {}
-    }
+    isDev: true
+    // skills: {
+    //   //set of skills
+    // },
+    // education: {
+    //   //set of education
+    // },
+    // rating: 0,
+    // valid: {
+    //   firstName: "",
+    //   lastName: "",
+    //   userName: "",
+    //   password: "",
+    //   re_password: "",
+    //   email: "",
+    //   state: "",
+    //   isDev: true,
+    //   skills: {}
+    // }
   };
 
   createAccount = new AccountDataService();
@@ -211,9 +211,11 @@ class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log(
-      "ok, submit button is clicked and going to execute createAccount"
+      "ok, submit button is clicked and going to execute createAccount",
+      this.state
     );
-    this.createAccount.sendData(this.state);
+    //this.createAccount.sendData(this.state);
+    axios.post("/api/signup", JSON.stringify(this.state));
   };
 
   render() {
@@ -262,13 +264,13 @@ class Form extends Component {
           <label htmlFor="Email">Email</label>
           <input
             type="text"
-            value={this.state.email}
+            value={this.state.emailAddress}
             onChange={this.handleEmail}
-            name="email"
+            name="emailAddress"
             className={
               this.state.valid ? "valid form-control" : "invalid form-control"
             }
-            id="email"
+            id="emailAddress"
             placeholder="John_Doe@company.com"
           />
         </div>
