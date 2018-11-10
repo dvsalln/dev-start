@@ -1,28 +1,43 @@
 require("dotenv").config();
 const passport = require("passport");
-const User = require("../models/user");
-// const config = require('../config');
+const Developer = require("../models/Developer");
+const Sponsor = require("../models/Sponsor");
 const JwtStrategy = require("passport-jwt").Strategy;
 const ExtractJwt = require("passport-jwt").ExtractJwt;
 const LocalStrategy = require("passport-local");
 
 //Create local strategy
-const localOptions = { usernameField: "username" };
+const localOptions = { usernameField: "userName" };
 const localLogin = new LocalStrategy(localOptions, function(
-  username,
+  userName,
   password,
   done
 ) {
-  //Verify this email and password, call done with user if correct
+  //console.log("this is something", this.userName);
+  // here ,User trying to login can be either developer or sponsor.
+  // check both collection to find a match
+
+  //Verify this userName and password, call done with user if correct
   //Call done with false
-  User.findOne({ username }, function(err, user) {
+  Developer.findOne({ userName }, function(err, user) {
     if (err) return done(err);
-    if (!user) return done(null, false);
-    user.comparePassword(password, function(err, isMatch) {
-      if (err) return done(err);
-      if (!isMatch) return done(null, false);
-      return done(null, user);
-    });
+    if (!user) {
+      Sponsor.findOne({ userName }, function(err, user) {
+        if (err) return done(err);
+        if (!user) return done(null, false);
+        else
+          user.comparePassword(password, function(err, isMatch) {
+            if (err) return done(err);
+            if (!isMatch) return done(null, false);
+            return done(null, user);
+          });
+      });
+    } else
+      user.comparePassword(password, function(err, isMatch) {
+        if (err) return done(err);
+        if (!isMatch) return done(null, false);
+        return done(null, user);
+      });
   });
 });
 
@@ -37,10 +52,15 @@ const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
   //See if user ID exists in db
   //If yes, call done with user
   //Else, call done without user
-  User.find(payload.sub, function(err, user) {
+  Developer.find(payload.sub, function(err, user) {
     if (err) return done(err, false);
-    if (user) done(null, user);
-    else done(null, false);
+    if (!user) {
+      Sponsor.find(payload.sub, function(err, user) {
+        if (err) return done(err, false);
+        if (!user) done(null, false);
+        else done(null, user);
+      });
+    } else done(null, user);
   });
 });
 

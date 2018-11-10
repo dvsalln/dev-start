@@ -1,14 +1,14 @@
-const path = require("path");
 const developer = require("../controllers/developerController.js");
 const sponsor = require("../controllers/sponsorController.js");
 
 const passportService = require("../config/passport");
 const Authentication = require("../controllers/authentication");
 const passport = require("passport");
-
+const path = require("path");
+// All the Login strategies
 const requireAuth = passport.authenticate("jwt", { session: false });
 const requireSignin = passport.authenticate("local", { session: false });
-
+//console.log("hello i am here ", requireSignin);
 module.exports = function(app) {
   // Ensures your react app is being served at all times
   app.get("*", function(req, res, next) {
@@ -20,6 +20,12 @@ module.exports = function(app) {
   // app.post("/api/createprofile", Authention.)
   app.post("/api/signup", Authentication.signup);
   // Wire up API routes here!
+
+  app.post("api/developer/createprofile", requireAuth, function(
+    req,
+    res,
+    next
+  ) {});
   app.get("/api/developer/account", function(req, res, next) {
     developer
       .readDevAccount()
