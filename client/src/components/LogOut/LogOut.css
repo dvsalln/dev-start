@@ -1,5 +1,11 @@
 .logout {
   margin-left: 3em;
   background: #21639d;
-  color: white;
+  color: #F5B219;
+
+}
+
+.logout a:hover,
+.logout a:active {
+    color: #F5B219;
 }

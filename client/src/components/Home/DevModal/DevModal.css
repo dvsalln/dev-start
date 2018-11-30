@@ -1,0 +1,31 @@
+#dev-modal {
+   background-color: #e9ebee;
+   border-radius: 20px;
+   border: 0.8rem solid #3076b4;
+   max-width: 650px;
+   min-height: 670px;
+   margin: 0px auto;
+   margin-top: -35px;
+   padding: 30px;
+   position: relative;
+   color: #131313;
+}
+h3 {
+   font-size: 3rem;
+   color: #f5b219;
+}
+li {
+   
+   font-size: 1.15rem;
+}
+
+p {
+   font-size: 1.25rem;
+   
+}
+
+a:active,
+a:hover {
+   color: #f5b219;
+   text-decoration: none;
+}
