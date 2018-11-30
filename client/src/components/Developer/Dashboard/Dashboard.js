@@ -35,7 +35,6 @@ class Dashboard extends Component {
     return (
       <div className="container-flex">
         <div style={{ height: "100%" }}>
-          <LogOut />
           <div className="wrapper">
             <div className="row dev-db-row">
               <Header drawerClickHandler={this.drawerToggleClickHandler} />
