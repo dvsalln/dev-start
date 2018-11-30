@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Jumbotron.css";
 import DevModal from "../DevModal";
 import SponsorModal from "../SponsorModal";
+import Backdrop from "../../Global/Backdrop";
 
 class Jumbotron extends Component {
   state = {
@@ -20,10 +21,15 @@ class Jumbotron extends Component {
     });
   }
 
+  backdropClickHandler = () => {
+    this.setState({ show: false });
+  };
+
   render() {
-    
+    let backdrop;
 
     if (this.state.show) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
     
@@ -35,6 +41,7 @@ class Jumbotron extends Component {
           show={this.state.show} />
         <SponsorModal
           show={this.state.show} />
+        {backdrop}
 
           <h1>DevStart</h1>
           <h2><i>Start</i> a project, <i>Start</i> a career, <i>Start</i> today</h2>
