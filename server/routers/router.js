@@ -8,7 +8,7 @@ const path = require("path");
 // All the Login strategies
 const requireAuth = passport.authenticate("jwt", { session: false });
 const requireSignin = passport.authenticate("local", { session: false });
-//console.log("hello i am here ", requireSignin);
+
 module.exports = function(app) {
   // Ensures your react app is being served at all times
   app.get("*", function(req, res, next) {

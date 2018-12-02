@@ -39,7 +39,8 @@ class App {
   initDb() {
     try {
       this.mongodb = mongoose.connect(
-        process.env.MONGODB_URI || "mongodb://localhost:27017/1105",
+        process.env.MONGODB_URI ||
+          "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
 
         {
           useNewUrlParser: true,

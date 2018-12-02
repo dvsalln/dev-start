@@ -6,7 +6,7 @@ import ColumnTwo from "./ColumnTwo/ColumnTwo";
 import ColumnThree from "./ColumnThree/ColumnThree";
 import SideDrawer from "../../Global/SideDrawer";
 import Backdrop from "../../Global/Backdrop";
-import LogOut from "../../LogOut";
+
 class Dashboard extends Component {
   state = {
     sideDrawerOpen: false
@@ -35,7 +35,7 @@ class Dashboard extends Component {
     return (
       <div className="container-flex">
         <div style={{ height: "100%" }}>
-          <LogOut />
+        
           <div className="wrapper">
             <div className="row dev-db-row">
               <Header drawerClickHandler={this.drawerToggleClickHandler} />
