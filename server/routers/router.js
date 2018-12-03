@@ -12,7 +12,7 @@ const requireSignin = passport.authenticate("local", { session: false });
 module.exports = function(app) {
   // Ensures your react app is being served at all times
   app.get("*", function(req, res, next) {
-    res.sendFile(__dirname, "client", "build", "index.html"); ///try different way
+    res.sendFile(__dirname, "../client/build/index.html"); ///try different way
   });
   app.get("/api", requireAuth);
   // If the password / username combination is correct, give the user a token. If no, don't authenticate
