@@ -1,6 +1,6 @@
 // Test insert to DB
-//const seedDb = require("./models/seed").seedDb;
-//
+// const seedDb = require("./models/seed").seedDb;
+
 // Initialize Express
 const express = require("express");
 const app = express();
@@ -48,10 +48,13 @@ class App {
         } // Helps us avoid deprecation errors.
       );
 
-      sqlDb.sequelize.sync({ force: false }).then(function() {
-        console.log("SQL databse is connected");
-      });
-
+      try {
+        sqlDb.sequelize.sync({ force: false }).then(function() {
+          console.log("SQL databse is connected");
+        });
+      } catch (err) {
+        console.log(err);
+      }
       // Put a Sequelize connection here... ex: this.sqldb = sequelize connection
 
       console.log("Successfully connected to database.");
