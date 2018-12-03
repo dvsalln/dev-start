@@ -49,7 +49,7 @@ class App {
       );
 
       try {
-        sqlDb.sequelize.sync({ force: false }).then(function() {
+        sqlDb.sequelize.sync({ force: true }).then(function() {
           console.log("SQL databse is connected");
         });
       } catch (err) {
