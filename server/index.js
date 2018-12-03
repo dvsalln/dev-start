@@ -1,6 +1,6 @@
 // Test insert to DB
-//const seedDb = require("./models/seed").seedDb;
-//
+// const seedDb = require("./models/seed").seedDb;
+
 // Initialize Express
 const express = require("express");
 const app = express();
@@ -39,7 +39,8 @@ class App {
   initDb() {
     try {
       this.mongodb = mongoose.connect(
-        process.env.MONGODB_URI || "mongodb://localhost:27017/1105",
+        process.env.MONGODB_URI ||
+          "mongodb://devstart-admin:DevStartIs2Cool@ds231643.mlab.com:31643/devstart",
 
         {
           useNewUrlParser: true,
@@ -47,9 +48,13 @@ class App {
         } // Helps us avoid deprecation errors.
       );
 
-      sqlDb.sequelize.sync({ force: false }).then(function() {
-        console.log("SQL databse is connected");
-      });
+      try {
+        sqlDb.sequelize.sync({ force: false }).then(function() {
+          console.log("SQL databse is connected");
+        });
+      } catch (err) {
+        console.log("here ...... $$$$$ ############", err);
+      }
       // Put a Sequelize connection here... ex: this.sqldb = sequelize connection
 
       console.log("Successfully connected to database.");
