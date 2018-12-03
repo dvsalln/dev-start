@@ -53,7 +53,7 @@ class App {
           console.log("SQL databse is connected");
         });
       } catch (err) {
-        console.log(err);
+        console.log("here ...... $$$$$ ############", err);
       }
       // Put a Sequelize connection here... ex: this.sqldb = sequelize connection
 
