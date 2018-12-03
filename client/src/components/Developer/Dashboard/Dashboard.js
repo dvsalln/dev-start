@@ -6,7 +6,7 @@ import ColumnTwo from "./ColumnTwo/ColumnTwo";
 import ColumnThree from "./ColumnThree/ColumnThree";
 import SideDrawer from "../../Global/SideDrawer";
 import Backdrop from "../../Global/Backdrop";
-import LogOut from "../../LogOut";
+
 class Dashboard extends Component {
   state = {
     sideDrawerOpen: false
