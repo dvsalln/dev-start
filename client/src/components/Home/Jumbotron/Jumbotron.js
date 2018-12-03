@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./Jumbotron.css";
 import DevModal from "../DevModal";
-import SponsorModal from "../SponsorModal";
 import Backdrop from "../../Global/Backdrop";
 
 class Jumbotron extends Component {
   state = {
-    show: false
+    show: false,
+    showDevModal: false,
+    showSponsorModal: false
   }
   showSponsorModal = () => {
     this.setState({
@@ -39,8 +40,7 @@ class Jumbotron extends Component {
         <div className="text-wrapper">
         <DevModal
           show={this.state.show} />
-        <SponsorModal
-          show={this.state.show} />
+       
         {backdrop}
 
           <h1>DevStart</h1>

@@ -1,4 +1,4 @@
-#dev-modal {
+#modal {
    background-color: #e9ebee;
    border-radius: 20px;
    border: 0.8rem solid #3076b4;
@@ -9,8 +9,6 @@
    padding: 30px;
    position: relative;
    color: #131313;
-   transform: translateY(1.5%);
-   transition: transform 0.5s ease-in-out;
 }
 h3 {
    font-size: 3rem;
