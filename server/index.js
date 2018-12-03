@@ -48,15 +48,9 @@ class App {
         } // Helps us avoid deprecation errors.
       );
 
-<<<<<<< HEAD
-      // sqlDb.sequelize.sync({ force: false }).then(function() {
-      //   console.log("SQL databse is connected");
-      // });
-=======
-      //sqlDb.sequelize.sync({ force: false }).then(function() {
-       // console.log("SQL databse is connected");
-      //});
->>>>>>> 10f06d1e95d5212f88e1c1088da8de50ef62aee9
+      sqlDb.sequelize.sync({ force: false }).then(function() {
+        console.log("SQL databse is connected");
+      });
       // Put a Sequelize connection here... ex: this.sqldb = sequelize connection
 
       console.log("Successfully connected to database.");
@@ -71,17 +65,17 @@ class App {
     router(app);
     proposalRouter(app);
 
-    // if (process.env.NODE_ENV === "production")
-    //   app.use(express.static("client/build"));
-    // if (process.env.NODE_ENV === "test") app.use(morgan(() => null));
-    // else
-    //   app.use(
-    //     morgan(
-    //       "API Request (port " +
-    //         this.port +
-    //         "): :method :url :status :response-time ms - :res[content-length]"
-    //     )
-    //   );
+    if (process.env.NODE_ENV === "production")
+      app.use(express.static("client/build"));
+    if (process.env.NODE_ENV === "test") app.use(morgan(() => null));
+    else
+      app.use(
+        morgan(
+          "API Request (port " +
+            this.port +
+            "): :method :url :status :response-time ms - :res[content-length]"
+        )
+      );
   }
   run() {
     this.server.listen(this.port, () => {
