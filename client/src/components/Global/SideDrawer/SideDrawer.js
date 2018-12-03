@@ -7,19 +7,34 @@ const SideDrawer = props => {
     drawerClasses = "side-drawer open";
   }
   return (
-    <nav>
+    <div>
+      <div>
       <ul className={drawerClasses}>
-        <a href="/developer/dashboard">Dev Dash</a>
-        <br />
-        <a href="/developer/profile">My Profile</a>
-        <br />
-        <a href="/sponsor/dashboard">Sponsor Dash</a>
-        <br />
-        <a href="/sponsor/profile">Sponsors</a>
-        <br />
-        <LogOut />
+          <a href="/developer/dashboard">Dashboard</a>
+            <br />
+            <br />
+          <a href="/developer/profile">My Profile</a>
+            <br />
+            <br />
+          <a href="/sponsor/dashboard">Proposals</a>
+            <br />
+            <br />
+          <a href="/sponsor/dashboard">Sponsors</a>
+            <br />
+            <br />
+          <a href="/sponsor/dashboard">Leaderboard</a>
+            <br />
+            <br />
+          <a href="/sponsor/dashboard">Teams</a>
+            <br />
+            <br />
+          <a href="/sponsor/dashboard"></a>
+            <br />
+            <br />                    
+          <LogOut />
       </ul>
-    </nav>
+      </div>
+    </div>
   );
 };
 
