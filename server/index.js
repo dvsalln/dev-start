@@ -59,7 +59,7 @@ class App {
     }
   }
   initMiddleware() {
-    app.use(cors());
+    //app.use(cors());
     app.use(bodyParser.json({ type: "*/*" })); // Type indicates ALL header types OK
     app.use(express.static(path.resolve(__dirname, "..", "..", "public"))); // Serve files in our Rect app public directory
     router(app);
