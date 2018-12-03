@@ -48,9 +48,15 @@ class App {
         } // Helps us avoid deprecation errors.
       );
 
+<<<<<<< HEAD
       // sqlDb.sequelize.sync({ force: false }).then(function() {
       //   console.log("SQL databse is connected");
       // });
+=======
+      //sqlDb.sequelize.sync({ force: false }).then(function() {
+       // console.log("SQL databse is connected");
+      //});
+>>>>>>> 10f06d1e95d5212f88e1c1088da8de50ef62aee9
       // Put a Sequelize connection here... ex: this.sqldb = sequelize connection
 
       console.log("Successfully connected to database.");
