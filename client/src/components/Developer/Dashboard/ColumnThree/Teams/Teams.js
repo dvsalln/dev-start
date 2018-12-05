@@ -8,17 +8,22 @@ import teams from "../../../../../models/teams.json";
 class Teams extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    teams
+    teams,
+    lgShow: false
   };
 
   render() {
     return (
+    
       <div className="teams">
       <div className="card">
         <div className="card-body">
         
           <h2 className="card-title">Teams</h2>
-          <button className="add-team btn btn-primary"><strong>+</strong></button>
+          <button 
+          className="add-team btn btn-primary"
+          onClick={() => this.setState({ lgShow: true })}
+          ><strong>+</strong></button>
         
           {this.state.teams.map(teams => (
             <TeamsList
